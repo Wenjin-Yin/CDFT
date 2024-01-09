@@ -1,1 +1,11 @@
+Constrained Density Functional Theory (C-DFT) emerges as an exceedingly convenient methodology for the construction of charge/spin localized states. It adeptly addresses phenomena associated with charge transfer and facilitates the computation of electronic couplings, encompassing theories such as Marcus theory. Moreover, C-DFT proves instrumental in rectifying charge delocalization induced by self-interaction errors and parameterizing model Hamiltonians. The charge/spin-localized states are achieved by compelling the localization of electronic and spin densities within spatial regions centered on individual atoms. The physical underpinnings of CDFT are meticulously elucidated on the CP2K official website (https://manual.cp2k.org/trunk/methods/dft/constrained_dft.html). Herein, we outline the key steps employed in our application of this methodology:
 
+1. In the initial step, we employed the functionality of C-DFT to anchor the polarons, ensuring their occupancy at the desired Ti sites, such as Tiα or Tiβ.
+
+2. Subsequently, the determination of a crucial parameter, the reorganization energy (λ), becomes imperative. The calculation of λ involves utilizing the structural and wavefunction files corresponding to Tiβ.
+
+3. A Mixed C-DFT simulation is employed to extract the electronic coupling constant (Hαβ).
+
+4. Finally, we can obtain the ket from the equation of the calculated rate of charge transfer for λ and Hαβ.
+
+Here, we present a set of sample files for reference in usage. Our sample files exhibit minimal deviations from those available on the official website, and adjustments may be made according to desired environment.
